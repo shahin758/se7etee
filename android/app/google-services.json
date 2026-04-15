@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "816733463693",
+    "project_id": "se7etee",
+    "storage_bucket": "se7etee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816733463693:android:7c2841dce08f8f6891aec4",
+        "android_client_info": {
+          "package_name": "com.omar.se7etee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDj3QPbsXfTGx2XS9ck-av-RzZkP9fAOJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
