@@ -1,22 +1,22 @@
-# 🩺 Se7ety (صحتي) - Doctor Appointment App
+## 🩺 Se7ety (صحتي) - Doctor Appointment App
 Se7ety (صحتي) is a modern healthcare mobile application built with Flutter, designed to simplify the process of finding doctors and booking medical appointments بسهولة وسرعة.
 
-# 📱 Overview:
+## 📱 Overview:
 The app provides users with a seamless experience to:
 
-🔍 Search for doctors across different specialties
-📅 Book and manage appointments بسهولة
-❤️ Save favorite doctors
-🛒 Manage bookings and appointment history
-👤 Edit profile and update personal information
+## 🔍 Search for doctors across different specialties
+- 📅 Book and manage appointments بسهولة
+- ❤️ Save favorite doctors
+- 🛒 Manage bookings and appointment history
+- 👤 Edit profile and update personal information
 
 ## 🛠️ Tech Stack
-Flutter & Dart
-Cubit (State Management)
-Dio (API Integration)
-GoRouter (Navigation)
-SharedPreferences (Local Storage)
-Firebase (for backend services)
+- Flutter & Dart
+- Cubit (State Management)
+- Dio (API Integration)
+- GoRouter (Navigation)
+- SharedPreferences (Local Storage)
+- Firebase (for backend services)
 
 📸 Screenshots
 <img width="250" height="750" alt="Splash Screen" src="https://github.com/user-attachments/assets/a65db138-fec4-458f-900c-c8c9163f5e8c" />
