@@ -32,9 +32,6 @@ The app provides users with a seamless experience to:
 
 
 
-<img width="1567" height="720" alt="DataBase User" src="https://github.com/user-attachments/assets/333ee4a9-bced-4e25-a94e-0f3655d583af" />
-<img width="1146" height="513" alt="DataBase" src="https://github.com/user-attachments/assets/a20f9cf7-a712-4646-890f-1366bbe39c43" />
-<img width="872" height="107" alt="User Registered" src="https://github.com/user-attachments/assets/8d5148ea-0d94-4575-bfa3-e3200946a0a4" />
 
 
 
