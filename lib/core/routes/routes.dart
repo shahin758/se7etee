@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:se7etee/core/constants/user_type_enum.dart';
+import 'package:se7etee/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:se7etee/features/auth/presentation/page/login_screen.dart';
 import 'package:se7etee/features/auth/presentation/page/resgister_screen.dart';
 import 'package:se7etee/features/intro/splash/splash_screen.dart';
 import 'package:se7etee/features/intro/on_boarding/on_boarding_screen.dart';
 import 'package:se7etee/features/intro/welcome/welcome_screen.dart';
+import 'package:se7etee/features/patient/main/patient_main_app_screen.dart';
 
 var globalContext = GlobalKey<NavigatorState>();
 
@@ -16,6 +19,8 @@ class Routes {
   static const String welcome = '/welcome';
   static const String login = '/login';
   static const String register = '/register';
+  static const String patientMainApp = '/patientMainApp';
+  static const String doctorMainApp = '/doctorMainApp';
 
   static final GoRouter router = GoRouter(
     navigatorKey: globalContext,
@@ -29,13 +34,19 @@ class Routes {
       GoRoute(path: welcome, builder: (context, state) => WelcomeScreen()),
       GoRoute(
         path: login,
-        builder: (context, state) =>
-            LoginScreen(userType: state.extra as UserTypeEnum),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(),
+          child: LoginScreen(userType: state.extra as UserTypeEnum),
+        ),
       ),
       GoRoute(
         path: register,
-        builder: (context, state) => RegisterScreen(userType: state.extra as UserTypeEnum),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(),
+          child: RegisterScreen(userType: state.extra as UserTypeEnum),
+        ),
       ),
+       GoRoute(path: patientMainApp, builder: (context, state) => PatientMainAppScreen()),
     ],
   );
 }

@@ -25,5 +25,5 @@ abstract class AppImages {
   static const String on3Svg = 'assets/images/on3.svg';
   static const String noSearchSvg = 'assets/images/no-search.svg';
   static const String noSsceduledSvg = 'assets/images/no-scheduled.svg';
-
+ static const String loadingLottie = 'assets/images/loading.json';
 }

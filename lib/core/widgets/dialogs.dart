@@ -30,6 +30,6 @@ void showLoadingDialog(BuildContext context) {
   showDialog(
     context: context,
 
-    builder: (context) => Center(child: Lottie.asset(AppImages.loading)),
+    builder: (context) => Center(child: Lottie.asset(AppImages.loadingLottie)),
   );
 }
