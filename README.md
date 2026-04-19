@@ -27,6 +27,17 @@ The app provides users with a seamless experience to:
 <img width="250" height="750" alt="WelcomeScreen" src="https://github.com/user-attachments/assets/78b48ba3-814b-49ac-aa87-3b82a312b0e7" />
 <img width="250" height="750" alt="Doctor Screen" src="https://github.com/user-attachments/assets/f76f06b7-7a4f-4f68-b533-3d84f34c8a8a" />
 <img width="250" height="750" alt="Patient Screen" src="https://github.com/user-attachments/assets/8db5573d-0a79-43f3-9ccb-cf30eee94456" />
+<img width="250" height="750" alt="Screenshot_1776441363" src="https://github.com/user-attachments/assets/c7128970-cf0e-43d9-8cbc-791074d13984" />
+<img width="250" height="750" alt="Screenshot_1776603526" src="https://github.com/user-attachments/assets/48a45ab6-8a1e-43b7-af0f-208db877486b" />
+
+
+
+<img width="1567" height="720" alt="DataBase User" src="https://github.com/user-attachments/assets/333ee4a9-bced-4e25-a94e-0f3655d583af" />
+<img width="1146" height="513" alt="DataBase" src="https://github.com/user-attachments/assets/a20f9cf7-a712-4646-890f-1366bbe39c43" />
+<img width="872" height="107" alt="User Registered" src="https://github.com/user-attachments/assets/8d5148ea-0d94-4575-bfa3-e3200946a0a4" />
+
+
+
 
 
 
