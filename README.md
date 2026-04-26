@@ -1,3 +1,4 @@
+
 ## 🩺 Se7ety (صحتي) - Doctor Appointment App
 Se7ety (صحتي) is a modern healthcare mobile application built with Flutter, designed to simplify the process of finding doctors and booking medical appointments بسهولة وسرعة.
 
@@ -29,9 +30,12 @@ The app provides users with a seamless experience to:
 <img width="250" height="750" alt="Patient Screen" src="https://github.com/user-attachments/assets/8db5573d-0a79-43f3-9ccb-cf30eee94456" />
 <img width="250" height="750" alt="Screenshot_1776441363" src="https://github.com/user-attachments/assets/c7128970-cf0e-43d9-8cbc-791074d13984" />
 <img width="250" height="750" alt="Screenshot_1776603526" src="https://github.com/user-attachments/assets/48a45ab6-8a1e-43b7-af0f-208db877486b" />
-
-
-
+<img width="250" height="750" alt="HomeScreen" src="https://github.com/user-attachments/assets/ef079c24-4e67-4ed6-937d-6b47ec015de5" />
+<img width="250" height="750" alt="Screenshot_1776860924" src="https://github.com/user-attachments/assets/36aaad29-e8be-4356-b5a2-b28a2fc638cc" />
+<img width="250" height="750" alt="Screenshot_1776599763" src="https://github.com/user-attachments/assets/c2987e43-6f2b-4680-9691-81df3dda02f4" />
+<img width="250" height="750" alt="Screenshot_1777136683" src="https://github.com/user-attachments/assets/d1deb18f-cf9a-48dd-97f8-b5a5a636a8e8" />
+<img width="250" height="750" alt="Screenshot_1777205412" src="https://github.com/user-attachments/assets/a6fbd99b-d929-41b5-be85-26d549fe3932" />
+<img width="250" height="750" alt="Screenshot_1777205420" src="https://github.com/user-attachments/assets/ed97a54e-f4b5-4150-9bda-770d80394664" />
 
 
 
