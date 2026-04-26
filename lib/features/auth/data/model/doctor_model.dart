@@ -1,7 +1,10 @@
+import 'dart:io';
+
 class DoctorModel {
   String? uid;
   String? name;
-  String? image;
+  File? image;
+  String? imageUrl;
   String? specialization;
   int? rating;
   String? email;
@@ -15,6 +18,7 @@ class DoctorModel {
   DoctorModel({
     this.name,
     this.image,
+    this.imageUrl,
     this.specialization,
     this.rating,
     this.email,
@@ -45,7 +49,7 @@ class DoctorModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['name'] = name;
-    data['image'] = image;
+    data['image'] = imageUrl;
     data['specialization'] = specialization;
     data['rating'] = rating;
     data['email'] = email;
@@ -62,7 +66,7 @@ class DoctorModel {
   Map<String, dynamic> toUpdateData() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (name != null) data['name'] = name;
-    if (image != null) data['image'] = image;
+    if (imageUrl != null) data['image'] = imageUrl;
     if (specialization != null) data['specialization'] = specialization;
     if (rating != null) data['rating'] = rating;
     if (email != null) data['email'] = email;

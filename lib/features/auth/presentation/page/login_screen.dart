@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +114,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text('نسيت كلمة السر ؟', style: TextStyles.caption212),
                 ),
                 const Gap(18),
-                MainButton(onPressed: () async {}, text: "تسجيل الدخول"),
+               MainButton(
+                  onPressed: () async {
+                    if (cubit.formKey.currentState!.validate()) {
+                      await cubit.login();
+                    }
+                  },
+                  text: "تسجيل الدخول",
+                ),
                 const Gap(28),
                 SocialLogin(),
                 Padding(

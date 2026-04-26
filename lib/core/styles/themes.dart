@@ -8,9 +8,16 @@ abstract class AppThemes {
     fontFamily: AppFonts.cairo,
     scaffoldBackgroundColor: AppColors.backgroundcolor,
     appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.backgroundcolor,
+      backgroundColor: AppColors.primaryColor,
       elevation: 0,
       centerTitle: true,
+      foregroundColor: AppColors.whitecolor,
+      titleTextStyle: TextStyle(
+        fontFamily: AppFonts.cairo,
+        color: AppColors.whitecolor,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+      ),
       surfaceTintColor: Colors.transparent,
     ),
     dividerTheme: DividerThemeData(color: AppColors.bordercolor),

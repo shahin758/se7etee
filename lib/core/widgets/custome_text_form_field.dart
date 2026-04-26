@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomeTextFormField extends StatelessWidget {
   const CustomeTextFormField({
@@ -14,6 +15,8 @@ class CustomeTextFormField extends StatelessWidget {
     this.textInputAction,
     this.controller,
     this.textAlign = TextAlign.start,
+    this.maxLines,
+    this.suffixIcon,
   });
 
   final String? hintText;
@@ -27,15 +30,23 @@ class CustomeTextFormField extends StatelessWidget {
   final TextInputAction? textInputAction;
   final TextEditingController? controller;
   final TextAlign textAlign;
+  final int? maxLines;
+  final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      inputFormatters: [
+        if (keyboardType == TextInputType.phone)
+          LengthLimitingTextInputFormatter(11),
+      ],
+      maxLines: maxLines,
       focusNode: focusNode,
       keyboardType: keyboardType,
       readOnly: readOnly,
       textInputAction: textInputAction,
-      decoration: InputDecoration(hintText: hintText, prefixIcon: prefixIcon),
+      decoration: InputDecoration(
+          hintText: hintText, prefixIcon: prefixIcon, suffixIcon: suffixIcon),
       validator: validator,
       onChanged: onChanged,
       onTapOutside: (event) {

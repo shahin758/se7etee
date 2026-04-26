@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 
 
 class CustomSvgPicture extends StatelessWidget {
-  const CustomSvgPicture({
+  const CustomSvgPicture( {
     super.key,
     required this.path,
     this.color,

@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,7 +39,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         } else if (state is AuthSuccessState) {
           if (widget.userType == UserTypeEnum.patient) {
             pushReplacement(context, Routes.patientMainApp);
-          } else {}
+          } else {
+            pushReplacement(context, Routes.doctorUpdateProfile);
+          }
         } else if (state is AuthFailureState) {
           pop(context);
           showMyDialog(context, state.errorMessage);
