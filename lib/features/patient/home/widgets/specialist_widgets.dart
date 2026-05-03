@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:se7etee/core/constants/app_images.dart';
 import 'package:se7etee/core/functions/navigation.dart';
@@ -28,11 +27,11 @@ class SpecialistsBanner extends StatelessWidget {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  /* pushTo(
+                  pushTo(
                     context,
                     Routes.specializationSearch,
                     extra: cards[index].specialization,
-                  );*/
+                  );
                 },
                 child: ItemCardWidget(model: cards[index]),
               );

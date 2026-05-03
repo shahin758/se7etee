@@ -6,7 +6,7 @@ import 'package:se7etee/core/styles/text_style.dart';
 abstract class AppThemes {
   static ThemeData get lightTheme => ThemeData(
     fontFamily: AppFonts.cairo,
-    scaffoldBackgroundColor: AppColors.backgroundcolor,
+    scaffoldBackgroundColor: AppColors.whitecolor,
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.primaryColor,
       elevation: 0,
@@ -48,7 +48,7 @@ abstract class AppThemes {
     ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.body16.copyWith(color: AppColors.textcolor),
-      fillColor: AppColors.whitecolor,
+      fillColor: AppColors.accentColor,
       filled: true,
 
       border: OutlineInputBorder(

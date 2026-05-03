@@ -17,7 +17,7 @@ abstract class SharedPref {
   }
 
   static Future<void> cacheUserId(String userId) async {
-    await pref.setString(userId, userId);
+    await pref.setString(SharedPref.userId, userId);
   }
 
   static String getUserId() {

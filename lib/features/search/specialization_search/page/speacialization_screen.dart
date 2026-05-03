@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:se7etee/core/services/firebase/failures/firestore_provider.dart';
 import 'package:se7etee/core/styles/colors.dart';
 import 'package:se7etee/core/styles/text_style.dart';
+import 'package:se7etee/core/widgets/cards/doctor_card.dart';
 import 'package:se7etee/features/auth/data/model/doctor_model.dart';
 
 class SpecializationSearchScreen extends StatelessWidget {
@@ -19,31 +20,29 @@ class SpecializationSearchScreen extends StatelessWidget {
         title: Text(specialization),
       ),
       body: FutureBuilder(
-        future: FirebaseProvider.getDoctors(),
+        future: FirebaseProvider.getDoctorsSpecializations(specialization),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          return snapshot.data?.docs.isEmpty == true
-              ? EmptyWidget()
-              : Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: ListView.builder(
-                    physics: const ClampingScrollPhysics(),
-                    itemCount: snapshot.data?.docs.length,
-                    itemBuilder: (context, index) {
-                      DoctorModel doctor = DoctorModel.fromJson(
-                        snapshot.data!.docs[index].data()
-                            as Map<String, dynamic>,
-                      );
-                      if (doctor.specialization == '' ||
-                          doctor.specialization == null) {
-                        return const SizedBox();
-                      }
-                      // return DoctorCard(doctor: doctor);
-                    },
-                  ),
+            return const Center(
+              child: CircularProgressIndicator(
+                value: .9,
+                color: AppColors.blackcolor,
+              ),
+            );
+          } else {
+            if (snapshot.data?.docs.isEmpty == true) {
+              return EmptyWidget();
+            }
+            return ListView.builder(
+              itemCount: snapshot.data?.docs.length,
+              itemBuilder: (context, index) {
+                DoctorModel doctor = DoctorModel.fromJson(
+                  snapshot.data?.docs[index].data() as Map<String, dynamic>,
                 );
+                return DoctorCard(doctor: doctor);
+              },
+            );
+          }
         },
       ),
     );

@@ -77,7 +77,6 @@ class _HomePageState extends State<PatientHomeScreen> {
               ),
               const SizedBox(height: 20),
 
-              // --------------- Search Bar --------------------------
               _searchBar(context),
 
               const SizedBox(height: 20),
@@ -98,32 +97,6 @@ class _HomePageState extends State<PatientHomeScreen> {
       ),
     );
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   Container _searchBar(BuildContext context) {
     return Container(

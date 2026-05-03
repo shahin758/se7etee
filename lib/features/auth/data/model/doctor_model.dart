@@ -33,7 +33,7 @@ class DoctorModel {
 
   DoctorModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];
-    image = json['image'];
+    imageUrl = json['image'];
     specialization = json['specialization'];
     rating = json['rating'];
     email = json['email'];
@@ -71,7 +71,7 @@ class DoctorModel {
     if (rating != null) data['rating'] = rating;
     if (email != null) data['email'] = email;
     if (phone1 != null) data['phone1'] = phone1;
-    if (phone1 != null) data['phone2'] = phone2;
+    if (phone2 != null) data['phone2'] = phone2;
     if (bio != null) data['bio'] = bio;
     if (openHour != null) data['openHour'] = openHour;
     if (closeHour != null) data['closeHour'] = closeHour;

@@ -29,7 +29,7 @@ class _TopRatedListState extends State<TopRatedList> {
             return ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              itemCount: snapshot.data?.docs.length, // all doctors in firebase
+              itemCount: snapshot.data?.docs.length, 
               itemBuilder: (context, index) {
                 DoctorModel doctor = DoctorModel.fromJson(
                   snapshot.data?.docs[index].data() as Map<String, dynamic>,

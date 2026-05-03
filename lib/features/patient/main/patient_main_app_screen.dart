@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:se7etee/core/styles/colors.dart';
 import 'package:se7etee/core/styles/text_style.dart';
+import 'package:se7etee/features/patient/appointements/appointments_screen.dart';
 import 'package:se7etee/features/patient/home/presentation/home_screen.dart';
+import 'package:se7etee/features/patient/patient_profile/page/patient_profile.dart';
+import 'package:se7etee/features/search/main_search/page/search_screen.dart';
 
 class PatientMainAppScreen extends StatefulWidget {
   const PatientMainAppScreen({super.key});
@@ -26,16 +29,16 @@ class _MainPageState extends State<PatientMainAppScreen> {
           });
         },
       ),
-      //const SearchScreen(),
-      //const MyAppointmentsScreen(),
-      //const PatientProfileScreen(),
+      const SearchScreen(),
+      const MyAppointmentsScreen(),
+      const PatientProfileScreen(),
     ];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[0],
+      body: _pages[_selectedIndex],
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(10, 10, 10, 20),
         decoration: BoxDecoration(

@@ -1,11 +1,9 @@
-import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:se7etee/core/constants/app_images.dart';
-import 'package:se7etee/core/constants/user_type_enum.dart';
 import 'package:se7etee/core/functions/navigation.dart';
 import 'package:se7etee/core/styles/colors.dart';
 import 'package:se7etee/core/styles/text_style.dart';
@@ -16,6 +14,7 @@ import 'package:se7etee/features/auth/data/model/specialization.dart';
 import 'package:se7etee/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:se7etee/features/auth/presentation/cubit/auth_state.dart';
 import 'package:se7etee/features/doctor/widgets/doctor_phone_numbers.dart';
+import 'package:se7etee/core/routes/routes.dart';
 
 class UpdateDoctorProfileScreen extends StatefulWidget {
   const UpdateDoctorProfileScreen({super.key});
@@ -27,7 +26,7 @@ class UpdateDoctorProfileScreen extends StatefulWidget {
 
 class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
   String? _imagePath;
-  File? imageFile;
+  //File? imageFile;
 
   Future<void> _pickImage(ImageSource source) async {
     final pickedFile = await ImagePicker().pickImage(
@@ -37,7 +36,7 @@ class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
     if (pickedFile != null) {
       setState(() {
         _imagePath = pickedFile.path;
-        imageFile = File(pickedFile.path);
+       // imageFile = File(pickedFile.path);
         context.read<AuthCubit>().imageFile = File(pickedFile.path);
       });
     }
@@ -76,23 +75,19 @@ class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
   @override
   Widget build(BuildContext context) {
     var cubit = context.read<AuthCubit>();
-    return BlocProvider(
-      create: (context) => AuthCubit(),
-      child: BlocListener<AuthCubit, AuthState>(
-        listener: (context, state) {
+    return BlocListener<AuthCubit, AuthState>(
+      listener: (context, state) {
           if (state is AuthLoadingState) {
             showLoadingDialog(context);
           } else if (state is AuthSuccessState) {
-            if (state.userType == UserTypeEnum.patient) {
-              pop(context);
-              log('success');
-            } else {}
+            pop(context);
+            pushToBase(context, Routes.welcome);
           } else if (state is AuthFailureState) {
             pop(context);
             showMyDialog(context, state.errorMessage);
-          }
-        },
-        child: Scaffold(
+        }
+      },
+      child: Scaffold(
           appBar: AppBar(title: const Text('إكمال عملية التسجيل')),
           body: SingleChildScrollView(
             child: Padding(
@@ -148,7 +143,6 @@ class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
                             ],
                           ),
                         ),
-                        // التخصص---------------
                         Container(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 20,
@@ -259,7 +253,7 @@ class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
               child: MainButton(
                 onPressed: () async {
                   if (cubit.formKey.currentState!.validate()) {
-                    if (imageFile != null) {
+                    if (cubit.imageFile != null) {
                       cubit.updateDoctorProfile();
                     } else {
                       showMyDialog(
@@ -274,8 +268,7 @@ class _UpdateDoctorProfileScreenState extends State<UpdateDoctorProfileScreen> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 
   Column _workHours(AuthCubit cubit) {

@@ -125,6 +125,7 @@ class AuthRepo {
       await FirebaseProvider.updateDoctor(doctorData);
       return right(unit);
     } catch (e) {
+      print('Error updating doctor profile: $e');
       return left(Failure(message: 'حدث خطأ'));
     }
   }

@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 class CustomeTextFormField extends StatelessWidget {
   const CustomeTextFormField({
     super.key,
-    required this.hintText,
+     this.hintText,
     this.keyboardType,
     this.validator,
     this.prefixIcon,
@@ -16,7 +16,7 @@ class CustomeTextFormField extends StatelessWidget {
     this.controller,
     this.textAlign = TextAlign.start,
     this.maxLines,
-    this.suffixIcon,
+    this.suffixIcon, 
   });
 
   final String? hintText;
